@@ -1,0 +1,285 @@
+#about {
+
+  .pageTitle {
+    background: black;
+
+    .container {
+      padding-top: 154px;
+      padding-bottom: 10px;
+
+      @include mq($mobileSize) {
+        padding-top: 150px;
+        padding-bottom: 10px;
+      }
+
+      h2 {
+        font-size: $fsH2;
+        font-weight: 700;
+        color: white;
+        margin: 20px 0;
+
+        @include mq($mobileSize) {
+          font-size: $mfsH2;
+          margin: 10px 20px;
+        }
+      }
+    }
+  }
+
+  .detail {
+    background-image: linear-gradient(to bottom, rgba(40, 108, 24, 0.6), rgba(18, 8, 2, 0.6)), url('./img/AdobeStock_629247123.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0 100px;
+    color: white;
+
+    @include mq($mobileSize) {
+      padding: 30px 20px 80px;
+      padding-top: 50px;
+    }
+
+    .container {
+      h2 {
+        text-align: center;
+        font-size: $fsH2;
+        font-family: $fontFamilyMin;
+        font-weight: 700;
+
+        @include mq($mobileSize) {
+          font-size: $mfsH2;
+          margin-bottom: 50px;
+        }
+      }
+
+      .block {
+        margin-bottom: 100px;
+        @include mq($mobileSize) {
+          margin-bottom: 60px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        h3 {
+          font-size: $fsH3;
+          font-weight: 700;
+          margin: 0 0 30px;
+          font-family: $fontFamilyMin;
+          border-bottom: 1px solid white;
+
+          @include mq($mobileSize) {
+            font-size: $mfsH3;
+            margin-bottom: 40px;
+          }
+        }
+
+        &.overview {
+          .list {
+            display: flex;
+            margin-left: 20px;
+            margin-bottom: 20px;
+
+            @include mq($mobileSize) {
+              flex-wrap: wrap;
+              margin-left: 10px;
+            }
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+
+            .title {
+              width: 200px;
+              @include mq($mobileSize) {
+                width: 100%;
+                font-weight: 700;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+
+        &.philosophy {
+          .copy {
+            font-size: $fsH2;
+            font-family: $fontFamilyMin;
+            font-weight: 700;
+            margin-bottom: 30px;
+
+            @include mq($mobileSize) {
+              font-size: $mfsH3;
+              margin-bottom: 20px;
+            }
+          }
+
+          .text {
+            margin: 0 20px;
+
+            @include mq($mobileSize) {
+              font-size: $mfsbodySS;
+              line-height: 2;
+            }
+          }
+        }
+
+        &.vision {
+          .copy {
+            font-size: $fsH2;
+            font-family: $fontFamilyMin;
+            font-weight: 700;
+            margin-bottom: 20px;
+
+            @include mq($mobileSize) {
+              font-size: $mfsH3;
+              margin-bottom: 20px;
+            }
+          }
+
+          .text {
+            margin: 0 20px;
+            margin-bottom: 30px;
+
+            @include mq($mobileSize) {
+              font-size: $mfsbodySS;
+              line-height: 2;
+            }
+          }
+
+          .list {
+            margin: 0 20px;
+            @include mq($mobileSize) {
+              margin: 0 20px 0 0;
+            }
+
+            .list-item {
+              margin-bottom: 10px;
+
+              @include mq($mobileSize) {
+                font-size: $mfsbodySS;
+                line-height: 2;
+                margin-bottom: 30px;
+              }
+
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .daihyo {
+    padding: 70px 0 80px;
+
+    @include mq($mobileSize) {
+      padding: 30px 20px 50px 20px;
+    }
+
+    .container {
+
+      h2 {
+        font-size: $fsH2;
+        font-weight: 700;
+        color: $darkblue;
+        margin: 0;
+        margin-bottom: 80px;
+        text-align: center;
+
+        @include mq($tabletSize) {
+          font-size: $fsH3;
+          margin-bottom: 50px;
+        }
+
+        @include mq($mobileSize) {
+          font-size: $mfsH2;
+          margin-bottom: 50px;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100px;
+          height: 3px;
+          background-color: $darkblue;
+          margin-top: 6px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        span {
+          display: inline-block;
+        }
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include mq($mobileSize) {
+          flex-direction: column-reverse;
+        }
+
+        .left-side {
+          width: 65%;
+          @include mq($mobileSize) {
+            width: 100%;
+          }
+
+          .text {
+            line-height: 1.7;
+            @include mq($mobileSize) {
+              margin-bottom: 80px;
+            }
+          }
+
+          .contactBtn1 {
+            margin-top: 80px;
+            text-align: center;
+
+            @include mq($mobileSize) {
+              margin-top: 40px;
+            }
+          }
+        }
+
+        .right-side {
+          width: 30%;
+          text-align: center;
+
+          @include mq($mobileSize) {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+          }
+
+          img {
+            width: 100%;
+          }
+
+          .daihyoImage {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .work {
+    background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.7), rgba(2, 10, 41, 0.7)), url('./img/AdobeStock_295578729.jpg');
+    background-size: 100%;
+    background-position: center;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+}

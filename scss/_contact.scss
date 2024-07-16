@@ -1,0 +1,305 @@
+#contact {
+
+  .pageTitle {
+    background: black;
+
+    .container {
+      padding-top: 154px;
+      padding-bottom: 10px;
+
+      @include mq($mobileSize) {
+        padding-top: 140px;
+        padding-bottom: 10px;
+      }
+
+      h2 {
+        font-size: $fsH2;
+        font-weight: 700;
+        color: white;
+        margin: 20px 0;
+
+        @include mq($mobileSize) {
+          font-size: $mfsH2;
+          margin: 20px;
+        }
+      }
+    }
+  }
+
+  .firstview {
+    background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.4), rgba(2, 10, 41, 0.4)), url('./img/AdobeStock_643326049.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+
+    @include mq($mobileSize) {
+      padding: 50px 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include mq($mobileSize) {
+        flex-wrap: wrap;
+      }
+
+      .container-left {
+        width: 48%;
+
+        @include mq($mobileSize) {
+          width: 100%;
+          margin-bottom: 50px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .container-right {
+        width: 48%;
+        color: white;
+        font-size: $fsbodySS;
+        line-height: 1.8;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+
+        @include mq($tabletSize) {
+          font-size: 1.2rem;
+        }
+
+        @include mq($mobileSize) {
+          width: 100%;
+          font-size: $mfsbodySS;
+        }
+
+        .contactBtn1 {
+          margin-bottom: 60px;
+
+          @include mq($mobileSize) {
+            margin-bottom: 30px;
+            text-align: center;
+          }
+
+          div {
+            @include mq($tabletSize) {
+              width: auto;
+
+            }
+            @include mq($mobileSize) {
+              padding: 10px;
+              width: 100%;
+              max-width: 460px;
+            }
+
+            a {
+              width: 100%;
+              padding: 30px 50px;
+  
+              @include mq($tabletSize) {
+                padding: 30px 0;
+                font-size: 1.2rem;
+              }
+  
+              @include mq($mobileSize) {
+                padding: 10px 0;
+                font-size: $mfsbodyS;
+              }
+            }
+          }
+
+        }
+
+        .text {
+          color: white;
+        }
+
+      }
+    }
+  }
+
+  .okomari {
+    background: $bgDarkBlue;
+    padding: 80px 0;
+
+    @include mq($mobileSize) {
+      padding: 30px 20px;
+      padding-top: 50px;
+    }
+
+    .container {
+
+      h2 {
+        width: 100%;
+        font-size: $fsH2;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 80px;
+        color: $darkblue;
+
+        @include mq($mobileSize) {
+          font-size: $mfsH2;
+          margin-bottom: 40px;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100px;
+          height: 3px;
+          background-color: $darkblue;
+          margin-top: 6px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .lead {
+        font-size: $fsbodySS;
+        line-height: 1.8;
+        margin-bottom: 60px;
+        text-align: center;
+
+        @include mq($mobileSize) {
+          font-size: $mfsbodySS;
+          margin-bottom: 20px;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        @include mq($mobileSize) {
+          flex-wrap: wrap;
+        }
+
+        .images {
+          width: 56%;
+          // display: flex;
+          // flex-wrap: wrap;
+          // justify-content: space-between;
+          @media screen {
+            width: 100%;
+          }
+
+          .image {
+            // width: 48%;
+            @include mq($mobileSize) {
+              // width: 100%;
+              // margin-bottom: 20px;
+            }
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+
+        .list {
+          padding: 0 0 0 80px;
+          @include mq($mobileSize) {
+            padding: 0 0 0 20px;
+            width: 100%;
+          }
+
+          .list-item {
+            margin-bottom: 20px;
+            font-size: $fsbodySS;
+            font-weight: 600;
+            list-style: none;
+            list-style-position: outside;
+            position: relative;
+            // padding: 20px 0px;
+
+            @include mq($mobileSize) {
+              margin-bottom: 10px;
+              font-size: $mfsbodySS;
+              font-weight: 600;
+              padding: 4px 10px 4px 10px;
+              color: $darkgrey;
+              width: 100%;
+            }
+          }
+
+          .list-item::before {
+            content: '✔';
+            position: absolute;
+            color: $lightgreen; /* Checkmark color */
+            transform: translateX(-40px);
+
+            @include mq($mobileSize) {
+              transform: translateX(-30px);
+            }
+          }
+
+          .list-item:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .consulting {
+    background: $bgDarkGrey;
+    padding: 80px 0 100px;
+    color: white;
+
+    @include mq($mobileSize) {
+      padding: 50px 20px 80px;
+    }
+
+    h2 {
+      font-size: $fsH2;
+      font-family: $fontFamilyMin;
+      font-weight: 700;
+      margin: 0 0 20px;
+
+      @include mq($mobileSize) {
+        font-size: $mfsH2;
+        text-align: center;
+      }
+
+      span {
+        display: inline-block;
+        font-family: inherit
+      }
+    }
+
+    p {
+      font-family: $fontFamilyMin;
+      font-size: $fsbodySS;
+      margin-bottom: 100px;
+
+      @include mq($mobileSize) {
+        margin-bottom: 40px;
+        font-size: $mfsbodyS;
+      }
+    }
+
+    .contactBtn2 {
+      text-align: center;
+
+      a {
+        width: 100%;
+        padding: 30px 50px;
+
+        @include mq($mobileSize) {
+          padding: 10px 20px;
+        }
+      }
+    }
+
+  }
+
+}

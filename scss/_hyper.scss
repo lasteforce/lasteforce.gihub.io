@@ -1,0 +1,282 @@
+#hyper {
+  text-align: center;
+
+  .pageTitle {
+    background: $darkblue;
+
+    .container {
+      padding: 10px 20px;
+      padding-top: 154px;
+      padding-bottom: 10px;
+
+      @include mq($mobileSize) {
+        padding-top: 140px;
+        padding-bottom: 10px;
+      }
+
+      h2 {
+        font-size: $fsH2;
+        font-weight: 700;
+        margin: 20px 0;
+        text-align: left;
+        color: white;
+
+        @include mq($mobileSize) {
+          font-size: $mfsH2;
+          margin: 20px 10px;
+        }
+
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+
+
+  .firstview {
+    padding: 40px 20px 100px;
+    background-image: linear-gradient(to top, $bgDarkBlue, rgba(255, 255, 255, 0.8));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include mq($mobileSize) {
+      padding: 20px 0 10px;
+    }
+
+    h2 {
+      font-size: 4.6rem;
+      color: black;
+      margin-bottom: 20px;
+
+      @include mq($mobileSize) {
+        font-size: 2.8rem;
+      }
+    }
+
+    .text {
+      font-size: $fsH2;
+      line-height: 2;
+      margin-bottom: 20px;
+
+      @include mq($mobileSize) {
+        font-size: $mfsH4;
+      }
+    }
+
+    .btn {
+      margin-bottom: 60px;
+    }
+
+    .lead {
+      margin-bottom: 10px;
+    }
+
+    .image {
+      width: 100%;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .jinzai {
+    border-bottom: 1px solid $darkblue;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 100px 40px;
+
+      @include mq($mobileSize) {
+        padding: 40px 10px 40px;
+      }
+
+      .left-side {
+        width: 39%;
+        @include mq($tabletSize) {
+          width: 100%;
+          margin-bottom: 100px;
+        }
+
+        @include mq($mobileSize) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+
+        h3 {
+          font-size: $fsH2;
+          font-weight: 700;
+          margin: 0;
+          margin-bottom: 20px;
+
+          @include mq($mobileSize) {
+            font-size: $mfsH2;
+            margin-bottom: 20px;
+          }
+
+          span {
+            display: inline-block;
+          }
+        }
+
+        .text {
+          line-height: 2;
+          margin-bottom: 40px;
+
+          @include mq($mobileSize) {
+            font-size: $mfsbodySS;
+            margin-bottom: 40px;
+          }
+        }
+      }
+
+      .right-side {
+        width: 59%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include mq($tabletSize) {
+          width: 90%;
+          margin: 0 auto;
+        }
+
+        .image {
+          width: 48%;
+          @include mq($mobileSize) {
+            width: 100%;
+            margin-bottom: 40px;
+          }
+
+          img {
+            width: 100%;
+          }
+
+        }
+      }
+    }
+  }
+
+  .apeal {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 100px 40px;
+
+      @include mq($mobileSize) {
+        padding: 40px 10px 40px;
+      }
+
+      .left-side {
+        width: 39%;
+        @include mq($tabletSize) {
+          width: 100%;
+          margin-bottom: 100px;
+        }
+
+        @include mq($mobileSize) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+
+        h3 {
+          font-size: $fsH2;
+          font-weight: 700;
+          margin: 0;
+          margin-bottom: 20px;
+
+          @include mq($mobileSize) {
+            font-size: $mfsH2;
+            margin-bottom: 20px;
+          }
+
+          span {
+            display: inline-block;
+          }
+        }
+
+        .text {
+          line-height: 2;
+          margin-bottom: 40px;
+
+          @include mq($mobileSize) {
+            font-size: $mfsbodySS;
+          }
+        }
+      }
+
+      .right-side {
+        width: 59%;
+        display: flex;
+        justify-content: space-between;
+
+        @include mq($tabletSize) {
+          width: 90%;
+          margin: 0 auto;
+        }
+
+        .image {
+          text-align: center;
+
+          @include mq($mobileSize) {
+            width: 100%;
+            margin-bottom: 40px;
+          }
+
+          img {
+            width: 80%;
+
+            @include mq($mobileSize) {
+              width: 100%;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .qr {
+    background-image: linear-gradient(to bottom, $bgDarkBlue, rgba(255, 255, 255, 0.8));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 40px;
+
+    @include mq($mobileSize) {
+      padding: 60px 20px;
+    }
+
+    .image {
+      margin-bottom: 40px;
+      @include mq($mobileSize) {
+        margin-bottom: 30px;
+      }
+
+      img {
+        width: 90%;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .goToForm {
+    background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.2), rgba(2, 10, 41, 0.2)), url('./img/AdobeStock_408978298.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+
+    .lead {
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+  }
+}

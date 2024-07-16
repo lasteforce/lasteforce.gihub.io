@@ -1,0 +1,441 @@
+#home {
+
+  h2 {
+    font-size: $fsH2;
+    font-weight: 700;
+    margin: 10px 0 60px 0;
+    color: $lightblue;
+    line-height: 1.3;
+
+    @include mq($mobileSize) {
+      font-size: $mfsH2;
+      margin: 10px 0 40px 0;
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 3px;
+      background-color: $lightblue;
+      margin-top: 6px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .firstview {
+    background-image: url('./img/AdobeStock_295578729.jpg');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('./img/AdobeStock_295578729.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 50px;
+
+    @include mq($mobileSize) {
+      padding: 30px 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-top: 144px;
+
+      @include mq($mobileSize) {
+        flex-wrap: wrap;
+        margin-top: 140px;
+      }
+
+      .container-left {
+        width: 48%;
+
+        @include mq($mobileSize) {
+          width: 100%;
+        }
+
+        h2 {
+          color: white;
+          border-bottom: 4px solid white;
+          font-size: $fsFirstViewL;
+          margin: 0;
+          @include mq($tabletSize) {
+            font-size: $fsFirstViewS;
+          }
+
+          @include mq($mobileSize) {
+            font-size: 1.5rem;
+            border-bottom: 2px solid white;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+
+        .button-service {
+          margin: 60px 0 30px;
+
+          @include mq($mobileSize) {
+            margin: 30px 0;
+            text-align: right;
+          }
+        }
+
+        .button-primary.nav-menu-active {
+          pointer-events: none;
+          cursor: none;
+        }
+      }
+
+      .container-right {
+        width: 48%;
+
+        @include mq($mobileSize) {
+          width: 100%;
+          text-align: center;
+        }
+
+        img {
+          width: 100%;
+
+          @include mq($mobileSize) {
+            width: 80%;
+            max-width: 600px;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    background-image: url('./img/AdobeStock_295578729.jpg');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
+    url('./img/AdobeStock_603212703.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+
+    h3 {
+      font-size: $fsH3;
+      font-weight: 700;
+      margin: 0;
+      color: $turquoise;
+
+      @include mq($mobileSize) {
+        font-size: $mfsH3;
+        margin: 0;
+      }
+    }
+
+    h4 {
+      font-size: $fsH4;
+      font-weight: 700;
+      margin: 0;
+
+      @include mq($mobileSize) {
+        font-size: $mfsH4;
+        margin: 0;
+      }
+    }
+
+    .container {
+      padding: 50px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .title {
+        text-align: center;
+        width: 100%;
+      }
+
+      .block {
+        line-height: 1.8;
+        width: 29.8%;
+
+        @include mq($tabletSize) {
+          width: 100%;
+        }
+
+        p {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+
+  .service {
+    background-image: linear-gradient(to bottom, rgba(2, 27, 65, 0.2), rgba(2, 27, 65, 0.8));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+
+    h3 {
+      font-size: $fsH3;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.3;
+
+      @include mq($tabletSize) {
+        font-size: $mfsH3;
+        margin: 0;
+      }
+    }
+
+
+    .container {
+      padding: 50px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .title {
+        text-align: center;
+        width: 100%;
+      }
+
+      .block {
+        color: white;
+        line-height: 1.8;
+        width: 29.8%;
+        height: 530px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        position: relative;
+
+        @include mq($mobileSize) {
+          width: 100%;
+          height: 400px;
+          margin-bottom: 20px;
+        }
+
+
+        .block-desc {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 20px;
+          font-size: 0.8em;
+          background: $lightblue;
+          opacity:0;
+          transform: translateY(100px);
+          transition: opacity 0.3s, transform 0.3s;
+          @include mq($mobileSize) {
+            font-size: 0.7em;
+          }
+
+          .block-lead {
+            font-size: 1.2em;
+          }
+
+          .body {
+            margin-top: 1em;
+          }
+        }
+
+        &:hover .block-desc {
+          // display: block;
+          // transition: all 0.3s ease-in-out;
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+
+        &.launch {
+          background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.6), rgba(2, 10, 41, 0.6)), url('./img/AdobeStock_643326049.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        &.proven {
+          background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.6), rgba(2, 10, 41, 0.6)), url('./img/AdobeStock_295578729.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        &.new {
+          background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.6), rgba(2, 10, 41, 0.6)), url('./img/AdobeStock_646758922.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  .gallery {
+    background-image: linear-gradient(to top, rgba(2, 27, 65, 0.2), rgba(2, 27, 65, 0.7));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+
+    h2 {
+      color: $lightblue;
+    }
+
+    h3 {
+      font-size: $fsH4;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.3;
+
+      @include mq($tabletSize) {
+        font-size: $mfsH3;
+        margin: 0;
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
+
+
+    .container {
+      padding: 50px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .title {
+        text-align: center;
+        width: 100%;
+      }
+
+      .block {
+        color: white;
+        line-height: 1.8;
+        width: 29.8%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+
+        @include mq($mobileSize) {
+          width: 100%;
+          height: 300px;
+          margin-bottom: 20px;
+        }
+
+        &>h3 {
+          background: rgba(0, 60, 150, 0.8) !important;
+          padding: 30px 10px;
+          text-align: center;
+        }
+
+        &:last-of-type>h3 {
+          background: rgba(0, 184, 173, 0.8) !important;
+        }
+
+
+        .block-desc {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 20px;
+          font-size: 0.8em;
+          background: $lightblue;
+          max-height: 300px;
+            overflow-y: scroll;
+          opacity:0;
+          transform: translateY(100px);
+          transition: opacity 0.3s, transform 0.3s;
+
+          @include mq($mobileSize) {
+            font-size: 0.7em;
+            max-height: 300px;
+          }
+
+          &::-webkit-scrollbar{
+            width: 10px;
+          }
+          &::-webkit-scrollbar-track{
+              background-color: $darkgrey;
+          }
+          &::-webkit-scrollbar-thumb{
+              background-color: $skyblue;
+          }
+
+          .body {
+            margin-top: 1em;
+          }
+        }
+
+        &:hover .block-desc {
+          // display: block;
+          // transition: all 0.3s ease-in-out;
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+
+        &.launch {
+          background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.6), rgba(2, 10, 41, 0.6)), url('./img/AdobeStock_643326049.jpg');
+          background-image: url('./img/AdobeStock_629247123.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        &.proven {
+          background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.6), rgba(2, 10, 41, 0.6)), url('./img/AdobeStock_643326049.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        &.new {
+          background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.6), rgba(2, 10, 41, 0.6)), url('./img/IMG_0937.JPG');
+          background-image: url('./img/daihyou.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  .contact {
+
+    background-image: linear-gradient(to bottom, rgba(2, 10, 41, 0.6), rgba(2, 10, 41, 0.6)), url('./img/AdobeStock_643326049.jpg');
+    background-size: 100%;
+    background-position: center;
+    padding-top: 100px;
+
+    .contents {
+      background: $darkgrey;
+      text-align: center;
+      padding: 100px 20px;
+
+      h2 {
+        color: white;
+        font-size: $fsbodyL;
+        margin: 0;
+        margin-bottom: 80px;
+        @include mq($tabletSize) {
+          font-size: $fsbodyM;
+        }
+
+        @include mq($mobileSize) {
+          font-size: $mfsbodyM;
+          margin-bottom: 50px;
+        }
+
+        &::after {
+          display: none;
+        }
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
